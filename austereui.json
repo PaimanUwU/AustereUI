@@ -1,0 +1,11 @@
+{
+  "$schema": "https://austereui.com/schema.json",
+  "style": "default",
+  "tailwind": {
+    "config": "tailwind.config.js",
+    "css": "src/index.css"
+  },
+  "theme": {
+    "primary": "#10b981"
+  }
+}
