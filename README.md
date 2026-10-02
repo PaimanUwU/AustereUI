@@ -48,9 +48,8 @@ REGISTRY_URL=http://localhost:4000/r npm run build:registry
 npx serve public -l 4000
 # in a separate test project:
 npx shadcn@latest add http://localhost:4000/r/button.json
-```'
+```
  
-write_file docs/components-checklist.md '# Component checklist
  
 Implementation tracker for AustereUI (61 components). Tick a box once the component is in `registry/components/`, has a story, and builds with `npm run build:registry`.
  
