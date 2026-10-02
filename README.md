@@ -34,28 +34,13 @@ npm run build:registry   # → public/r/*.json
 3. Run `npm run build:registry`. npm dependencies and inter-component
    dependencies are detected from the imports.
  
-## Use it (consumer side)
- 
-```bash
-npx shadcn@latest init
-npx shadcn@latest add https://austereui.com/r/button.json
-```
- 
-Test locally before deploying:
- 
-```bash
-REGISTRY_URL=http://localhost:4000/r npm run build:registry
-npx serve public -l 4000
-# in a separate test project:
-npx shadcn@latest add http://localhost:4000/r/button.json
-```
- 
+## Available Components 
  
 Implementation tracker for AustereUI (61 components). Tick a box once the component is in `registry/components/`, has a story, and builds with `npm run build:registry`.
  
 "(last)" = deliberately built after the primitives it depends on.
  
-## 01 • Foundations & Inputs (19)
+### 01 • Foundations & Inputs (19)
  
 - [ ] Typography
 - [ ] Kbd
@@ -77,7 +62,8 @@ Implementation tracker for AustereUI (61 components). Tick a box once the compon
 - [ ] Input OTP
 - [ ] Field
  
-## 02 • Navigation & Layout (22)
+
+### 02 • Navigation & Layout (22)
  
 - [ ] Breadcrumb
 - [ ] Sidebar (last)
@@ -102,7 +88,8 @@ Implementation tracker for AustereUI (61 components). Tick a box once the compon
 - [ ] Skeleton
 - [ ] Empty
  
-## 03 • Feedback & Overlays (20)
+
+### 03 • Feedback & Overlays (20)
  
 - [ ] Popover
 - [ ] Tooltip
