@@ -5,7 +5,11 @@
     "config": "tailwind.config.js",
     "css": "src/index.css"
   },
+  "aliases": {
+    "components": "@/components",
+    "utils": "@/lib/utils"
+  },
   "theme": {
-    "primary": "#10b981"
+    "primary": "blue"
   }
 }

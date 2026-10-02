@@ -4,13 +4,13 @@
 
 @layer base {
   :root {
-    --primary: 16 185 129;
+    --primary: 37 99 235;
     --primary-foreground: 255 255 255;
     --primary-hex: #000000;
   }
 
   .dark {
-    --primary: 16 185 129;
+    --primary: 37 99 235;
     --primary-foreground: 255 255 255;
     --primary-hex: #ffffff;
   }

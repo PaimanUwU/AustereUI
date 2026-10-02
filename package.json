@@ -11,7 +11,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "build:registry": "node scripts/build-registry.js",
-    "init": "node --loader ts-node/esm scripts/init.ts || tsx scripts/init.ts || node scripts/init.js"
+    "init": "node scripts/bin.js init"
   },
   "bin": {
     "austereui": "./scripts/bin.js"
