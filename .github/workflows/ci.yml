@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - run: npm ci
+
+      # 1. Type checking & Linting
+      - run: npx tsc --noEmit
+      - run: npm run lint
+
+      # 2. Verify Registry JSON compiles cleanly
+      - run: npm run build:registry
+
+      # 3. Verify Storybook builds without broken stories
+      - run: npm run build-storybook
+
+      # 4. Verify Vite application build
+      - run: npm run build
