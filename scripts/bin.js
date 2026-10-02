@@ -275,7 +275,7 @@ async function handleAdd(components) {
   }
 
   // Check austereui.json or use sensible defaults
-  const configPath = path.resolve(process.cwd(), 'austereui.json');
+  const _configPath = path.resolve(process.cwd(), 'austereui.json');
   let registryBase = process.env.AUSTEREUI_REGISTRY || 'https://austereui.com/r';
 
   // If running in development inside the library repo, automatically use local public/r
@@ -311,7 +311,7 @@ async function handleAdd(components) {
             if (regDepItem.dependencies) {
               regDepItem.dependencies.forEach((d) => installedDeps.add(d));
             }
-          } catch (e) {
+          } catch {
             // Ignore if optional or already present
           }
         }
@@ -372,7 +372,7 @@ async function handleAdd(components) {
       try {
         execSync(installCmd, { stdio: 'inherit', cwd: process.cwd() });
         console.log(`\x1b[32m✔ Dependencies installed.\x1b[0m`);
-      } catch (err) {
+      } catch {
         console.warn(`\x1b[33m⚠️ Could not auto-install dependencies. Please run:\x1b[0m\n  ${installCmd}`);
       }
     } else {
